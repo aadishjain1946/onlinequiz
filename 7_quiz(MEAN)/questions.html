@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/question.css">
+    <script src="js/controller/questions.js"></script>
+    <script src="js/model/questions.js"></script>
+</head>
+
+<body>
+    <div id="contain">
+        <div class="container">
+            <div class="alert-info text-center">
+                <h1>QUESTIONS</h1>
+            </div>
+            <div class="form-group">
+                <label for="id">Question Id</label>
+                <input id="id" class="form-control" type="text" placeholder="Type Question id">
+                <label for="name">NAME</label>
+                <textarea id="name" class="form-control" cols="30" rows="4" placeholder="Type Question Name"></textarea>
+            </div>
+            <div class="options from-group">
+                <label>OPTIONS</label>
+                <button id="plus" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div id="Options" class="options form-group">
+            </div>
+            <div class="form-group">
+                <label for="Rans">RIGHT ANSWERE</label>
+                <input class="form-control" type="text" id="Rans">
+                <label for="score">Score&nbsp;</label><span id="range"></span>
+                <input id="score" class="form-control w-50" type="range" min="1" max="5" value="1">
+            </div>
+            <div class="operations row">
+                <div class="col-xl-2 col-lg-2 col-md-2 col sm-2">
+                    <button id="add" class="btn btn-primary"><i class="fa fa-plus-square" aria-hidden="true"></i>&nbsp;Add</button>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col sm-2">
+                    <button id="delete" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete</button>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col sm-2">
+                    <button id="update" class="btn btn-secondary"><i class="fas fa-reply "></i>&nbsp;Update</button>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col sm-2">
+                    <button id="save" class="btn btn-info"><i class="fas fa-save"></i>&nbsp;Save</button>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col sm-2">
+                    <button id="saveserver" class="btn btn-success"><i class="fas fa-save"></i>&nbsp;Save to server</button>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col sm-2">
+                    <button id="sort" class="btn btn-warning"><i class="fas fa-sort    "></i>&nbsp;Sort</button>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col sm-2">
+                    <button id="load" class='btn btn-info'><i class="fas fa-truck-loading"></i>&nbsp;
+                        Load</button>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col sm-2">
+                    <button id="clear" class='btn btn-danger'>Clear
+                        All</button>
+                </div>
+            </div>
+            <div id="delete-element" class="form-group">
+                <label for="del">ENTER ID</label>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8 col-md-9 col-sm-10">
+                        <input type="text" id="del" class="form-control" placeholder="ID of Element you want to delete">
+                    </div>
+                    <div class="col-xl-6 col-lg-4 col-md-3 col-sm-2">
+                        <button class="btn btn-danger" id="delt">ok</button>
+                    </div>
+                </div>
+            </div>
+            <div id="info-content">
+                <br>
+                <h2>Total Records </h2>
+                <table class='table table-bordered'>
+                    <thead class='thead-dark'>
+                        <tr>
+                            <th>S.no</th>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Option1</th>
+                            <th>Option2</th>
+                            <th>Option3</th>
+                            <th>Option4</th>
+                            <th>Option5</th>
+                            <th>Option5</th>
+                            <th>Right Ans</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cont-table">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+*{
+    font-family: 'Merriweather', serif;
+}
+#delete-element{
+    margin-top: 30px;
+}
+.operations button{
+    margin-bottom: 30px;
+}
